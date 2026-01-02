@@ -1,0 +1,306 @@
+/* Login.module.css */
+
+.container {
+  /* --- UniBee Brand Variables --- */
+  --bg-dark: #0b0e14;
+  --card-bg: rgba(22, 25, 32, 0.85);
+  --accent-yellow: #facc15; /* The core UniBee Yellow */
+  --accent-gold: #eab308;
+  --text-primary: #ffffff;
+  --text-secondary: #94a3b8;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --input-bg: #0b0e14;
+  
+  /* --- Page Layout --- */
+  background-color: var(--bg-dark);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  position: relative;
+  overflow: hidden;
+  color: var(--text-primary);
+  padding: 20px;
+}
+
+/* --- Ambient Background Glows --- */
+.glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  filter: blur(130px);
+  border-radius: 50%;
+  z-index: 0;
+  opacity: 0.12; /* Keeps the glow subtle and professional */
+}
+
+.glow1 {
+  top: -100px;
+  left: -100px;
+  background: var(--accent-yellow);
+}
+
+.glow2 {
+  bottom: -100px;
+  right: -100px;
+  background: var(--accent-gold);
+}
+
+/* --- The Login Card --- */
+.card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 440px;
+  background: var(--card-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border-subtle);
+  border-radius: 24px;
+  padding: 48px 40px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.logoBox {
+  width: 54px;
+  height: 54px;
+  background: linear-gradient(135deg, var(--accent-yellow), var(--accent-gold));
+  border-radius: 14px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(250, 204, 21, 0.2);
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+  /* Metallic gradient effect for text */
+  background: linear-gradient(to bottom, #ffffff 50%, #94a3b8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+/* --- Social Login Buttons --- */
+.socialGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.socialBtn {
+  background: #1c2029;
+  border: 1px solid var(--border-subtle);
+  color: #e2e8f0;
+  padding: 12px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.socialBtn:hover {
+  background: #252a36;
+  border-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-1px);
+}
+
+.googleIcon {
+  font-weight: 800;
+  color: #ffffff;
+}
+
+/* --- Divider --- */
+.divider {
+  position: relative;
+  text-align: center;
+  margin: 28px 0;
+}
+
+.divider::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--border-subtle);
+}
+
+.divider span {
+  position: relative;
+  background: #181c25; /* Matches card inner appearance */
+  padding: 0 15px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #4b5563;
+  letter-spacing: 1px;
+}
+
+/* --- Form Inputs --- */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.fieldIcon {
+  position: absolute;
+  left: 14px;
+  color: #4b5563;
+  transition: color 0.2s;
+}
+
+.input {
+  width: 100%;
+  background: var(--input-bg);
+  border: 1px solid var(--border-subtle);
+  padding: 14px 14px 14px 44px;
+  border-radius: 12px;
+  color: white;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--accent-yellow);
+  box-shadow: 0 0 0 4px rgba(250, 204, 21, 0.1);
+}
+
+.input:focus + .fieldIcon {
+  color: var(--accent-yellow);
+}
+
+.togglePass {
+  position: absolute;
+  right: 14px;
+  background: none;
+  border: none;
+  color: #4b5563;
+  cursor: pointer;
+  display: flex;
+}
+
+.togglePass:hover {
+  color: white;
+}
+
+/* --- Primary Action Button --- */
+.submitBtn {
+  background: linear-gradient(135deg, var(--accent-yellow), var(--accent-gold));
+  color: #000; /* Dark text on yellow background for accessibility */
+  border: none;
+  padding: 16px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  box-shadow: 0 10px 20px -5px rgba(250, 204, 21, 0.3);
+  transition: all 0.2s ease;
+}
+
+.submitBtn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px -5px rgba(250, 204, 21, 0.4);
+  filter: brightness(1.05);
+}
+
+.submitBtn:active {
+  transform: translateY(0);
+}
+
+.submitBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.arrow {
+  transition: transform 0.2s;
+}
+
+.submitBtn:hover .arrow {
+  transform: translateX(4px);
+}
+
+/* --- Footer & Links --- */
+.forgotLink {
+  color: var(--accent-yellow);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.footerText {
+  text-align: center;
+  margin-top: 32px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.footerText a {
+  color: var(--accent-yellow);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footerText a:hover {
+  text-decoration: underline;
+}
+
+/* --- Loading Spinner --- */
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top-color: #000;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

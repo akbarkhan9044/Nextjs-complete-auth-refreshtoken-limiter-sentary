@@ -2,6 +2,8 @@
 const nextConfig = {
   /* config options here */
   reactStrictMode: true,
+  cacheComponents:true
+
 };
 
 export default nextConfig;

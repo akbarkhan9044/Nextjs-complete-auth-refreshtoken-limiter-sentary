@@ -1,0 +1,80 @@
+/* NavbarBanner.module.css */
+
+/* --- Shared Colors --- */
+.yellowBg { background-color: #facc15; }
+.blackBg { background-color: #000000; }
+.blackText { color: #000000; }
+.whiteText { color: #ffffff; }
+
+
+/* === VARIATION A: Side-by-Side (Best for standard navbars) === */
+.containerRow {
+  /* CRITICAL constraint applied here */
+  width: 300px;
+  background-color: #facc15;
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  box-sizing: border-box; /* Ensures padding doesn't break the 300px width */
+}
+
+.text compact {
+  color: #000000;
+  font-weight: 700;
+  font-size: 0.9rem;
+  line-height: 1.1;
+}
+
+/* === VARIATION B: Stacked (If your navbar is taller) === */
+.containerCol {
+  width: 300px;
+  background-color: #facc15;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  
+  padding: 1rem;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.textStacked {
+  color: #000000;
+  font-weight: 800;
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.subText {
+  color: #1a1a1a; /* Slightly softer black */
+  font-size: 0.8rem;
+  margin-top: -0.4rem;
+  margin-bottom: 0.2rem;
+}
+
+
+/* === Shared Button Styling === */
+.buttonBlack {
+  background-color: #000000;
+  color: #ffffff; /* White text on black button for readability */
+  border: none;
+  padding: 0.5rem 0.85rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  cursor: pointer;
+  white-space: nowrap; /* Prevents "Shop Now" from breaking onto two lines */
+  transition: all 0.2s ease;
+}
+
+.buttonBlack:hover {
+  background-color: #27272a; /* A slightly lighter black (zinc-800) on hover */
+  transform: translateY(-1px);
+}

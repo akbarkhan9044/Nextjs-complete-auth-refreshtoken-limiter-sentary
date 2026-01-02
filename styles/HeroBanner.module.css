@@ -1,0 +1,50 @@
+/* HeroBanner.module.css */
+.container {
+    font-family: sans-serif;
+    /* 1. Fixed 300px height constraint */
+    height: 300px; 
+    
+    /* 2. Yellow Background */
+    background-color: #facc15; 
+    
+    /* 3. Layout - Center everything vertically and horizontally */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .headline {
+    /* 4. Black Text */
+    color: #000000; 
+    font-size: 2.5rem;
+    font-weight: 900;
+    line-height: 1.1;
+    text-transform: uppercase;
+    margin: 0 0 1.5rem 0; /* Space below the text for the button */
+    max-width: 600px; /* Prevents text from getting too wide on large screens */
+  }
+  
+  /* 5. Button styling - Black button for high contrast */
+  .button {
+    background-color: #000000;
+    color: #facc15; /* Yellow text on the black button */
+    border: none;
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #27272a; /* Slightly lighter black (zinc-800) on hover */
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.5);
+  }

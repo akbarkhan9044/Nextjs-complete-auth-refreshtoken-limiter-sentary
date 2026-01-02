@@ -1,0 +1,114 @@
+/* ProductDetail.module.css */
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    gap: 3rem;
+  }
+  
+  @media (min-width: 768px) {
+    .container {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  }
+  
+  .imageSection {
+    flex: 1;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .productImage {
+    max-width: 100%;
+    height: auto;
+    mix-blend-mode: multiply;
+    transition: transform 0.3s ease;
+  }
+  
+  .productImage:hover {
+    transform: scale(1.05);
+  }
+  
+  .infoSection {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .categoryBadge {
+    display: inline-block;
+    background: #e0e7ff;
+    color: #4338ca;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    width: fit-content;
+  }
+  
+  .title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #111827;
+    margin: 1rem 0;
+    line-height: 1.2;
+  }
+  
+  .priceRatingRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .price {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #111827;
+  }
+  
+  .rating {
+    font-size: 0.875rem;
+    color: #4b5563;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .descriptionTitle {
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+  
+  .descriptionText {
+    color: #4b5563;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+  
+  .addToCartBtn {
+    background-color: #000;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+  
+  .addToCartBtn:hover {
+    opacity: 0.8;
+  }
