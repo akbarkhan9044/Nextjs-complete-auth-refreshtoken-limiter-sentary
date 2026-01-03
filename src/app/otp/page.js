@@ -1,3 +1,4 @@
+
 import React, { Suspense } from 'react'
 import OtpComponent from '../component/OtpComponent'
 
@@ -5,9 +6,11 @@ export default async function Otp() {
   
   return (
     <div>
-      <Suspense>
-        <OtpComponent/>
-      </Suspense>
+  <Suspense fallback="Loading....">
+  <OtpComponent/>
+  </Suspense>
+
+      
     </div>
   )
 }
