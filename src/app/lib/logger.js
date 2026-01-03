@@ -1,29 +1,29 @@
 import * as Sentry from "@sentry/nextjs";
-import pino from "pino";
+// import pino from "pino";
 
-const isDevelopment = 'development';
+// const isDevelopment = 'development';
 
-const pinoLogger = pino({
-  // 1. FIX: Set level to 'debug' so Logger.debug() actually works
-  level: isDevelopment ? 'debug' : 'info', 
-  transport: isDevelopment 
-    ? {
-        target: 'pino-pretty',
-        options: {
-          colorize: true,
-          translateTime: 'SYS:standard',
-          ignore: 'pid,hostname',
-        },
-      } 
-    : undefined, // Production should use standard JSON for performance
-});
+// const pinoLogger = pino({
+//   // 1. FIX: Set level to 'debug' so Logger.debug() actually works
+//   level: isDevelopment ? 'debug' : 'info', 
+//   transport: isDevelopment 
+//     ? {
+//         target: 'pino-pretty',
+//         options: {
+//           colorize: true,
+//           translateTime: 'SYS:standard',
+//           ignore: 'pid,hostname',
+//         },
+//       } 
+//     : undefined, // Production should use standard JSON for performance
+// });
 
 export const Logger={
 
     log:(message,level="info",extra={})=>{
 
-        const pinoMethod = pinoLogger[level] ? level : 'info';
-        pinoLogger[pinoMethod](extra, message);
+        // const pinoMethod = pinoLogger[level] ? level : 'info';
+        // pinoLogger[pinoMethod](extra, message);
         if(level ==="error"){
             Sentry.captureException(message,{
                 level:"error",
