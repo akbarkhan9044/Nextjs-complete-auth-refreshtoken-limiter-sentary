@@ -1,9 +1,11 @@
 // ProductDetail.jsx
+import { Logger } from "../lib/logger";
 import Image from "next/image";
 import styles from "@/styles/ProductDetail.module.css"
 import { getDataProductFromId } from "../lib/data";
 export default  async function ProductDetail( {params} ) {
     const { id } = await params;
+    Logger.debug("Detail Page");
   const product = await getDataProductFromId(id);
   return (
     <div className={styles.container}>

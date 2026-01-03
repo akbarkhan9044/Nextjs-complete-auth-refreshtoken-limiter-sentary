@@ -3,7 +3,6 @@ import { fetchAllProduct } from '../lib/request';
 import { ProductCard } from './ProductCard';
 import styles from "@/styles/Product.module.css";
 export default async function FakeProduct() {
-
     const products=await fetchAllProduct();
     const hasProducts = Array.isArray(products) && products.length > 0;
 

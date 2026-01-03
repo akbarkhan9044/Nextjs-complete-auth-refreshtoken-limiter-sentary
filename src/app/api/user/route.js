@@ -16,6 +16,9 @@ export const POST=async(request)=>{
                 id:user._id
             });
 
+            console.log("Access token",accessToken);
+            console.log("Refresh token",refreshToken);
+
             const response={
                 userinfo:{
                     email:user.email,

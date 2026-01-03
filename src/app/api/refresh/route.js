@@ -24,7 +24,7 @@ const {refreshToken}=data;
             return NextResponse(JSON.stringify({message:"Unauthorized"},{status:401}));
         }
         await connectDatabase();
-        console.log("Refesh has been called");
+
         const user=await User.findOne({email:decode.payload.email});
         const accessToken=await signJWT({email:user.email,id:user._id});
         let datas= { 
